@@ -1,0 +1,92 @@
+/* General card styling */
+.card {
+    width: 420px;
+    height: 630px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content at the top initially */
+}
+
+/* Card header image - full width */
+.card-header {
+    width: 100%; /* Make the header full width */
+    margin-bottom: 20px; /* Adjust the space between the header and the body */
+}
+
+.card-header img {
+    width: 55%; /* Make the image stretch to the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Divider between sections */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+.card-body h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #0D163E;
+}
+
+/* Contact info list */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left; /* Aligns the content to the left */
+}
+
+.contact-info li {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    align-items: center; /* Vertically center the icon and text */
+}
+
+.contact-info a:hover {
+    color: #007bff; /* Change color to blue on hover */
+}
+
+/* Email and phone icons */
+.contact-info img {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.phone-icon {
+    width: 100px;
+}
+
+/* Save contact button */
+.save-contact {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0D163E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.save-contact:hover {
+    background-color: #0056b3;
+}

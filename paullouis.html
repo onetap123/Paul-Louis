@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paullouis.css">
+    <title>Profile Card</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <img src="fadilouis.png" alt="fadilouis-Logo">
+        </div>
+        <hr class="divider">
+        <div class="card-body">
+            <h2>Paul Louis - Sales & Logistics Executive</h2>
+            <ul class="contact-info">
+                <li>
+                    <a href="paul.fadilouisagency@gmail.com" target="_blank">
+                        <img src="emaillogo.jpg" alt="Email">
+                     paul.fadilouisagency@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="fadilouisagency@gmail.com" target="_blank">
+                        <img src="emaillogo.jpg" alt="Email">
+                        fadilouisagency@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="fadi.louis@cyberia.net.lb" target="_blank">
+                        <img src="emaillogo.jpg" alt="Email">
+                       fadi.louis@cyberia.net.lb
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+96181505420">
+                        <img src="phone_icon.png" alt="Phone Number" class="phone-icon">
+                        Phone
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="save-contact" onclick="downloadVCard()">SAVE CONTACT</button>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Paul Louis - Sales & Logistics Executive
+TEL;TYPE=WORK,VOICE:+96181505420
+EMAIL:paul.fadilouisagency@gmail.com
+EMAIL:fadilouisagency@gmail.com
+EMAIL:fadi.louis@cyberia.net.lb
+END:VCARD
+`;
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Paul_Louis.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
